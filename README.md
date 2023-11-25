@@ -1,16 +1,20 @@
 # Note for Renovate Team
 This service is configured to be compatible with Java Runtime 1.8 (pom.xml version file)
+You can test it using mvn test command. 
+
 <br>
 **Acutual Behaviour**
 <br>
 
 Pull request created that recommends Spring Boot version 2.7.17 -> 3.2.0.
 Spring Boot 3.2.0 requires minimum Java 17. Hence this recommendation is not correct.
+Got error "error: release version 1.8 not supported" post upgrade.
 <br>
 
 **Expected Behaviour**
 Recommended version should consider service's Java Runtime before recommending upgrade.  
 Also it would be ideal if it combines Java runtime upgrade and dependency upgrade together but this will be very major change. 
+All test cases should pass. 
 <br>
 
 # Spring Boot Hello World
